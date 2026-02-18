@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>تحليل منصات التواصل الاجتماعي | بحث إعلامي متكامل</title>
+<title>تحليل منصات التواصل الاجتماعي | بحث عصري</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;800&display=swap" rel="stylesheet">
 
@@ -25,30 +25,39 @@ nav{
 position:fixed;
 width:100%;
 top:0;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
-padding:15px;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(15px);
+padding:20px 0;
 text-align:center;
 z-index:1000;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+border-bottom:1px solid #00f5ff;
 }
 
 nav a{
-color:#aaa;
-margin:0 10px;
+color:#00f5ff;
+margin:0 18px;
 text-decoration:none;
-font-weight:600;
+font-weight:700;
+font-size:1.1rem;
+padding:8px 15px;
+border-radius:10px;
 transition:0.3s;
+text-shadow:0 0 5px #00f5ff;
 }
 
 nav a:hover{
-color:#00f5ff;
+background:rgba(0,245,255,0.2);
+color:#fff;
+text-shadow:0 0 12px #00f5ff;
+transform:scale(1.1);
 }
 
 section{
-padding:120px 20px;
+padding:140px 20px;
 min-height:100vh;
 opacity:0;
-transform:translateY(40px);
+transform:translateY(50px);
 transition:1s;
 }
 
@@ -62,81 +71,123 @@ text-align:center;
 }
 
 .hero h1{
-font-size:3rem;
+font-size:3.5rem;
 background:linear-gradient(90deg,#00f5ff,#8a2be2);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
+text-shadow:0 0 15px #00f5ff;
 }
 
 .hero p{
-margin-top:20px;
+margin-top:25px;
 max-width:750px;
 margin-left:auto;
 margin-right:auto;
 color:#ccc;
-line-height:1.8;
+line-height:1.9;
+font-size:1.1rem;
 }
 
 .card{
-background:rgba(255,255,255,0.05);
-padding:30px;
+background:rgba(255,255,255,0.08);
+padding:35px;
 margin:30px auto;
-max-width:950px;
-border-radius:20px;
-backdrop-filter:blur(15px);
-border:1px solid rgba(255,255,255,0.1);
-transition:0.4s;
+max-width:980px;
+border-radius:25px;
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,0.15);
+transition:0.5s;
+position:relative;
+overflow:hidden;
+}
+
+.card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(120deg, rgba(0,245,255,0.1), rgba(138,43,226,0.1));
+opacity:0;
+transition:0.6s;
+border-radius:25px;
+}
+
+.card:hover::before{
+opacity:1;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 25px #00f5ff;
+transform:translateY(-10px);
+box-shadow:0 0 35px #00f5ff;
 }
 
 h2{
 color:#00f5ff;
-margin-bottom:15px;
+margin-bottom:18px;
+text-shadow:0 0 8px #00f5ff;
 }
 
 .grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:20px;
-margin-top:20px;
+gap:25px;
+margin-top:25px;
 }
 
 .box{
-background:rgba(0,0,0,0.4);
-padding:20px;
-border-radius:15px;
+background:rgba(0,0,0,0.45);
+padding:22px;
+border-radius:18px;
+transition:0.4s;
+border:1px solid rgba(255,255,255,0.1);
+}
+
+.box:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px #8a2be2;
 }
 
 .box h3{
-margin-bottom:10px;
+margin-bottom:12px;
 color:#8a2be2;
+text-shadow:0 0 6px #8a2be2;
 }
 
 ul{
-line-height:1.9;
+line-height:2;
 color:#ddd;
 }
 
 .opinion{
-margin-top:20px;
+margin-top:22px;
 font-style:italic;
 color:#aaa;
 }
 
 footer{
 text-align:center;
-padding:30px;
+padding:35px;
 background:#0a0a14;
-color:#777;
+color:#ccc;
+font-size:0.95rem;
+letter-spacing:0.5px;
 }
 
 @media(max-width:768px){
 .grid{
 grid-template-columns:1fr;
+}
+nav a{
+margin:0 10px;
+font-size:1rem;
+}
+.hero h1{
+font-size:2.8rem;
+}
+.hero p{
+font-size:1rem;
 }
 }
 </style>
@@ -156,25 +207,127 @@ grid-template-columns:1fr;
 <section class="hero show" id="home">
 <h1>تحليل شامل لمنصات التواصل الاجتماعي</h1>
 <p>
-دراسة إعلامية حول نشأة أهم المنصات الرقمية، إيجابياتها وسلبياتها،
-وآراء المستخدمين حول تأثيرها في تشكيل الرأي العام والهوية الرقمية.
+دراسة إعلامية حديثة حول نشأة المنصات الرقمية، إيجابياتها وسلبياتها،
+وآراء المستخدمين حول تأثيرها في حياتهم اليومية والمجتمع الرقمي.
 </p>
+</section>
+
+<!-- إنستغرام -->
+<section id="instagram">
+<div class="card">
+<h2>إنستغرام</h2>
+<p>تأسس عام 2010 – يركز على الصور والفيديوهات القصيرة وصناعة المحتوى البصري.</p>
+
+<div class="grid">
+<div class="box">
+<h3>الإيجابيات</h3>
+<ul>
+<li>تعزيز الإبداع البصري</li>
+<li>بناء الهوية الرقمية</li>
+<li>منصة للتسويق الرقمي</li>
+<li>التواصل مع جمهور عالمي</li>
+</ul>
+</div>
+
+<div class="box">
+<h3>السلبيات</h3>
+<ul>
+<li>ضغط اجتماعي على الصورة والمظهر</li>
+<li>الإدمان على التصفح</li>
+<li>التنمر الإلكتروني</li>
+<li>تأثير على الصحة النفسية</li>
+</ul>
+</div>
+</div>
+
+<p class="opinion">
+💬 آراء المستخدمين: منصة ملهمة للإبداع، لكن البعض يشعر بالضغط النفسي بسبب ثقافة الكمال.
+</p>
+</div>
+</section>
+
+<!-- سناب شات -->
+<section id="snapchat">
+<div class="card">
+<h2>سناب شات</h2>
+<p>تأسس عام 2011 – يعتمد على الرسائل والصور المؤقتة والقصص اللحظية.</p>
+
+<div class="grid">
+<div class="box">
+<h3>الإيجابيات</h3>
+<ul>
+<li>خصوصية عالية للرسائل</li>
+<li>فلاتر وواقع معزز مبتكر</li>
+<li>تواصل سريع وعفوي</li>
+<li>مناسب للمحتوى اليومي</li>
+</ul>
+</div>
+
+<div class="box">
+<h3>السلبيات</h3>
+<ul>
+<li>صعوبة توثيق المحتوى</li>
+<li>الاستخدام المفرط للشباب</li>
+<li>احتمال سوء الاستخدام للخصوصية</li>
+<li>قليل الانتشار للكبار</li>
+</ul>
+</div>
+</div>
+
+<p class="opinion">
+💬 آراء المستخدمين: مساحة ممتعة وآمنة للشباب، لكنها محدودة الاستخدام للفئات الأكبر.
+</p>
+</div>
+</section>
+
+<!-- تيك توك -->
+<section id="tiktok">
+<div class="card">
+<h2>تيك توك</h2>
+<p>أُطلق عالميًا عام 2016 – منصة فيديوهات قصيرة تعتمد على الخوارزميات الذكية.</p>
+
+<div class="grid">
+<div class="box">
+<h3>الإيجابيات</h3>
+<ul>
+<li>انتشار سريع للمحتوى</li>
+<li>سهولة صناعة الفيديو</li>
+<li>اكتشاف مواهب جديدة</li>
+<li>تأثير على الرأي العام</li>
+</ul>
+</div>
+
+<div class="box">
+<h3>السلبيات</h3>
+<ul>
+<li>إدمان المحتوى السريع</li>
+<li>نشر معلومات مضللة أحيانًا</li>
+<li>تحديات خطيرة</li>
+<li>تأثير على التركيز</li>
+</ul>
+</div>
+</div>
+
+<p class="opinion">
+💬 آراء المستخدمين: منصة ترفيهية مبتكرة، لكنها تؤثر على وعي الشباب وسرعة انتشار الترندات.
+</p>
+</div>
 </section>
 
 <!-- فيسبوك -->
 <section id="facebook">
 <div class="card">
 <h2>فيسبوك</h2>
-<p>تأسس عام 2004 – من أوائل وأكبر شبكات التواصل الاجتماعي عالميًا.</p>
+<p>تأسس عام 2004 – أكبر شبكة اجتماعية عالمية.</p>
 
 <div class="grid">
 <div class="box">
 <h3>الإيجابيات</h3>
 <ul>
-<li>ربط العائلة والأصدقاء حول العالم</li>
-<li>إنشاء مجموعات مجتمعية</li>
-<li>منصة قوية للإعلانات</li>
-<li>مشاركة الأخبار والمحتوى المتنوع</li>
+<li>ربط العائلة والأصدقاء</li>
+<li>مجموعات مجتمعية</li>
+<li>منصة إعلانية قوية</li>
+<li>مشاركة الأخبار والمحتوى</li>
 </ul>
 </div>
 
@@ -183,14 +336,14 @@ grid-template-columns:1fr;
 <ul>
 <li>انتشار الأخبار المزيفة</li>
 <li>مشاكل الخصوصية</li>
-<li>الإدمان على التصفح الطويل</li>
-<li>استغلال البيانات لأغراض إعلانية</li>
+<li>الإدمان على التصفح</li>
+<li>استغلال البيانات</li>
 </ul>
 </div>
 </div>
 
 <p class="opinion">
-💬 آراء المستخدمين: يعتبره البعض منصة شاملة للتواصل المجتمعي، بينما ينتقده آخرون بسبب قضايا الخصوصية وتأثيره في نشر المعلومات غير الدقيقة.
+💬 آراء المستخدمين: منصة شاملة للتواصل، لكنها تواجه انتقادات بسبب الخصوصية والمعلومات المضللة.
 </p>
 </div>
 </section>
@@ -208,15 +361,15 @@ grid-template-columns:1fr;
 <li>سرعة نقل الأخبار</li>
 <li>منصة للنقاش العام</li>
 <li>تفاعل مباشر مع شخصيات مؤثرة</li>
-<li>تأثير قوي في القضايا السياسية</li>
+<li>تأثير قوي في السياسة والقضايا الاجتماعية</li>
 </ul>
 </div>
 
 <div class="box">
 <h3>السلبيات</h3>
 <ul>
-<li>الاستقطاب الحاد</li>
-<li>انتشار الجدل والصراعات الرقمية</li>
+<li>استقطاب حاد في الرأي العام</li>
+<li>انتشار الجدل الرقمي</li>
 <li>حملات التشهير</li>
 <li>انتشار المعلومات المضللة بسرعة</li>
 </ul>
@@ -224,13 +377,13 @@ grid-template-columns:1fr;
 </div>
 
 <p class="opinion">
-💬 آراء المستخدمين: يراه كثيرون منصة حرية تعبير، بينما يعتبره آخرون بيئة مليئة بالجدل والاستقطاب السياسي.
+💬 آراء المستخدمين: منصة حرية تعبير قوية، لكنها تحتوي على الكثير من الجدل والاستقطاب.
 </p>
 </div>
 </section>
 
 <footer>
-إعداد الطالبة | بحث في الإعلام الرقمي | 2026
+إعداد الطالبة | بحث الإعلام الرقمي | 2026
 </footer>
 
 <script>
