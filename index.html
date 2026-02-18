@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>منصات التواصل الاجتماعي | بحث إعلامي</title>
+<title>تحليل منصات التواصل الاجتماعي | بحث إعلامي متكامل</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;800&display=swap" rel="stylesheet">
 
@@ -19,7 +19,6 @@ scroll-behavior:smooth;
 body{
 background:linear-gradient(135deg,#0f0f1a,#1a1a2e);
 color:white;
-overflow-x:hidden;
 }
 
 nav{
@@ -35,7 +34,7 @@ z-index:1000;
 
 nav a{
 color:#aaa;
-margin:0 15px;
+margin:0 10px;
 text-decoration:none;
 font-weight:600;
 transition:0.3s;
@@ -49,7 +48,7 @@ section{
 padding:120px 20px;
 min-height:100vh;
 opacity:0;
-transform:translateY(50px);
+transform:translateY(40px);
 transition:1s;
 }
 
@@ -59,10 +58,6 @@ transform:translateY(0);
 }
 
 .hero{
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
 text-align:center;
 }
 
@@ -75,7 +70,9 @@ background:linear-gradient(90deg,#00f5ff,#8a2be2);
 
 .hero p{
 margin-top:20px;
-max-width:700px;
+max-width:750px;
+margin-left:auto;
+margin-right:auto;
 color:#ccc;
 line-height:1.8;
 }
@@ -84,15 +81,15 @@ line-height:1.8;
 background:rgba(255,255,255,0.05);
 padding:30px;
 margin:30px auto;
-max-width:900px;
+max-width:950px;
 border-radius:20px;
 backdrop-filter:blur(15px);
-transition:0.5s;
 border:1px solid rgba(255,255,255,0.1);
+transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-8px);
 box-shadow:0 0 25px #00f5ff;
 }
 
@@ -101,42 +98,33 @@ color:#00f5ff;
 margin-bottom:15px;
 }
 
-ul{
-line-height:2;
-color:#ddd;
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+margin-top:20px;
 }
 
-.stats{
-display:flex;
-justify-content:center;
-gap:40px;
-flex-wrap:wrap;
-margin-top:40px;
+.box{
+background:rgba(0,0,0,0.4);
+padding:20px;
+border-radius:15px;
 }
 
-.stat{
-text-align:center;
-}
-
-.stat h3{
-font-size:2.5rem;
+.box h3{
+margin-bottom:10px;
 color:#8a2be2;
 }
 
-.stat p{
-color:#aaa;
+ul{
+line-height:1.9;
+color:#ddd;
 }
 
-button.top{
-position:fixed;
-bottom:20px;
-left:20px;
-background:#00f5ff;
-border:none;
-padding:10px 15px;
-border-radius:10px;
-cursor:pointer;
-display:none;
+.opinion{
+margin-top:20px;
+font-style:italic;
+color:#aaa;
 }
 
 footer{
@@ -144,6 +132,12 @@ text-align:center;
 padding:30px;
 background:#0a0a14;
 color:#777;
+}
+
+@media(max-width:768px){
+.grid{
+grid-template-columns:1fr;
+}
 }
 </style>
 </head>
@@ -155,85 +149,89 @@ color:#777;
 <a href="#instagram">إنستغرام</a>
 <a href="#snapchat">سناب شات</a>
 <a href="#tiktok">تيك توك</a>
-<a href="#stats">إحصائيات</a>
+<a href="#facebook">فيسبوك</a>
+<a href="#twitter">تويتر</a>
 </nav>
 
 <section class="hero show" id="home">
-<h1>منصات التواصل الاجتماعي</h1>
+<h1>تحليل شامل لمنصات التواصل الاجتماعي</h1>
 <p>
-تحليل إعلامي حديث حول نشأة أهم تطبيقات التواصل الاجتماعي،
-مؤسسيها، وأنماط الاستخدام وتأثيرها في تشكيل الرأي العام
-والهوية الرقمية في العصر الرقمي.
+دراسة إعلامية حول نشأة أهم المنصات الرقمية، إيجابياتها وسلبياتها،
+وآراء المستخدمين حول تأثيرها في تشكيل الرأي العام والهوية الرقمية.
 </p>
 </section>
 
-<section id="instagram">
+<!-- فيسبوك -->
+<section id="facebook">
 <div class="card">
-<h2>إنستغرام</h2>
+<h2>فيسبوك</h2>
+<p>تأسس عام 2004 – من أوائل وأكبر شبكات التواصل الاجتماعي عالميًا.</p>
+
+<div class="grid">
+<div class="box">
+<h3>الإيجابيات</h3>
 <ul>
-<li>تأسس عام 2010</li>
-<li>المؤسسون: Kevin Systrom و Mike Krieger</li>
-<li>استحوذت عليه Meta عام 2012</li>
-<li>يركز على الصور والفيديوهات القصيرة</li>
-<li>أداة أساسية للتسويق الرقمي وصناعة المحتوى</li>
-<li>يساهم في بناء الهوية البصرية والثقافة الرقمية</li>
+<li>ربط العائلة والأصدقاء حول العالم</li>
+<li>إنشاء مجموعات مجتمعية</li>
+<li>منصة قوية للإعلانات</li>
+<li>مشاركة الأخبار والمحتوى المتنوع</li>
 </ul>
+</div>
+
+<div class="box">
+<h3>السلبيات</h3>
+<ul>
+<li>انتشار الأخبار المزيفة</li>
+<li>مشاكل الخصوصية</li>
+<li>الإدمان على التصفح الطويل</li>
+<li>استغلال البيانات لأغراض إعلانية</li>
+</ul>
+</div>
+</div>
+
+<p class="opinion">
+💬 آراء المستخدمين: يعتبره البعض منصة شاملة للتواصل المجتمعي، بينما ينتقده آخرون بسبب قضايا الخصوصية وتأثيره في نشر المعلومات غير الدقيقة.
+</p>
 </div>
 </section>
 
-<section id="snapchat">
+<!-- تويتر -->
+<section id="twitter">
 <div class="card">
-<h2>سناب شات</h2>
+<h2>تويتر (X)</h2>
+<p>تأسس عام 2006 – منصة تدوين مصغر تركز على الأخبار السريعة والرأي العام.</p>
+
+<div class="grid">
+<div class="box">
+<h3>الإيجابيات</h3>
 <ul>
-<li>تأسس عام 2011</li>
-<li>المؤسسون: Evan Spiegel و Bobby Murphy</li>
-<li>يعتمد على الرسائل المؤقتة</li>
-<li>رائد في فلاتر الواقع المعزز (AR)</li>
-<li>يستخدم للتواصل السريع واليومي</li>
-<li>يعزز مفهوم الخصوصية اللحظية</li>
+<li>سرعة نقل الأخبار</li>
+<li>منصة للنقاش العام</li>
+<li>تفاعل مباشر مع شخصيات مؤثرة</li>
+<li>تأثير قوي في القضايا السياسية</li>
 </ul>
 </div>
-</section>
 
-<section id="tiktok">
-<div class="card">
-<h2>تيك توك</h2>
+<div class="box">
+<h3>السلبيات</h3>
 <ul>
-<li>أُطلق عالميًا عام 2016</li>
-<li>مملوك لشركة ByteDance</li>
-<li>يعتمد على الفيديوهات القصيرة</li>
-<li>يصنع الترندات بسرعة قياسية</li>
-<li>له تأثير مباشر على الرأي العام</li>
-<li>منصة قوية للتسويق وصناعة النجوم الرقميين</li>
+<li>الاستقطاب الحاد</li>
+<li>انتشار الجدل والصراعات الرقمية</li>
+<li>حملات التشهير</li>
+<li>انتشار المعلومات المضللة بسرعة</li>
 </ul>
 </div>
-</section>
+</div>
 
-<section id="stats">
-<div class="card">
-<h2>إحصائيات عالمية تقريبية</h2>
-<div class="stats">
-<div class="stat">
-<h3 class="counter" data-target="2000">0</h3>
-<p>مليون مستخدم إنستغرام</p>
-</div>
-<div class="stat">
-<h3 class="counter" data-target="750">0</h3>
-<p>مليون مستخدم سناب شات</p>
-</div>
-<div class="stat">
-<h3 class="counter" data-target="1500">0</h3>
-<p>مليون مستخدم تيك توك</p>
-</div>
-</div>
+<p class="opinion">
+💬 آراء المستخدمين: يراه كثيرون منصة حرية تعبير، بينما يعتبره آخرون بيئة مليئة بالجدل والاستقطاب السياسي.
+</p>
 </div>
 </section>
 
 <footer>
 إعداد الطالبة | بحث في الإعلام الرقمي | 2026
 </footer>
-
-<button class="top" onclick="scrollToTop()">⬆</button>
 
 <script>
 const sections = document.querySelectorAll("section");
@@ -244,33 +242,6 @@ if(top < window.innerHeight - 100){
 sec.classList.add("show");
 }
 });
-
-if(window.scrollY > 300){
-document.querySelector(".top").style.display="block";
-}else{
-document.querySelector(".top").style.display="none";
-}
-});
-
-function scrollToTop(){
-window.scrollTo({top:0,behavior:'smooth'});
-}
-
-const counters=document.querySelectorAll(".counter");
-counters.forEach(counter=>{
-counter.innerText="0";
-const update=()=>{
-const target=+counter.getAttribute("data-target");
-const c=+counter.innerText;
-const inc=target/100;
-if(c<target){
-counter.innerText=`${Math.ceil(c+inc)}`;
-setTimeout(update,20);
-}else{
-counter.innerText=target+"+";
-}
-};
-update();
 });
 </script>
 
