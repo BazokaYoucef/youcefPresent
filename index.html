@@ -3,28 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>منصات التواصل الاجتماعي</title>
+<title>منصات التواصل الاجتماعي | بحث إعلامي</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;800&display=swap" rel="stylesheet">
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:'Cairo',sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
-background:#0f0f1a;
+background:linear-gradient(135deg,#0f0f1a,#1a1a2e);
 color:white;
+overflow-x:hidden;
 }
 
 nav{
 position:fixed;
-top:0;
 width:100%;
+top:0;
 background:rgba(0,0,0,0.6);
 backdrop-filter:blur(10px);
 padding:15px;
@@ -41,12 +42,20 @@ transition:0.3s;
 }
 
 nav a:hover{
-color:#8a2be2;
+color:#00f5ff;
 }
 
 section{
-padding:100px 20px;
+padding:120px 20px;
 min-height:100vh;
+opacity:0;
+transform:translateY(50px);
+transition:1s;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .hero{
@@ -55,37 +64,40 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(135deg,#1a1a2e,#16213e);
 }
 
 .hero h1{
 font-size:3rem;
-color:#8a2be2;
+background:linear-gradient(90deg,#00f5ff,#8a2be2);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .hero p{
 margin-top:20px;
-max-width:600px;
+max-width:700px;
 color:#ccc;
+line-height:1.8;
 }
 
 .card{
 background:rgba(255,255,255,0.05);
 padding:30px;
-margin:20px auto;
-max-width:800px;
-border-radius:15px;
-backdrop-filter:blur(10px);
-transition:0.4s;
+margin:30px auto;
+max-width:900px;
+border-radius:20px;
+backdrop-filter:blur(15px);
+transition:0.5s;
+border:1px solid rgba(255,255,255,0.1);
 }
 
 .card:hover{
 transform:translateY(-10px);
-box-shadow:0 0 20px #8a2be2;
+box-shadow:0 0 25px #00f5ff;
 }
 
 h2{
-color:#8a2be2;
+color:#00f5ff;
 margin-bottom:15px;
 }
 
@@ -94,10 +106,43 @@ line-height:2;
 color:#ddd;
 }
 
+.stats{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.stat{
+text-align:center;
+}
+
+.stat h3{
+font-size:2.5rem;
+color:#8a2be2;
+}
+
+.stat p{
+color:#aaa;
+}
+
+button.top{
+position:fixed;
+bottom:20px;
+left:20px;
+background:#00f5ff;
+border:none;
+padding:10px 15px;
+border-radius:10px;
+cursor:pointer;
+display:none;
+}
+
 footer{
 text-align:center;
-padding:20px;
-background:#111;
+padding:30px;
+background:#0a0a14;
 color:#777;
 }
 </style>
@@ -110,13 +155,15 @@ color:#777;
 <a href="#instagram">إنستغرام</a>
 <a href="#snapchat">سناب شات</a>
 <a href="#tiktok">تيك توك</a>
+<a href="#stats">إحصائيات</a>
 </nav>
 
-<section class="hero" id="home">
+<section class="hero show" id="home">
 <h1>منصات التواصل الاجتماعي</h1>
 <p>
-بحث إعلامي حول نشأة أهم تطبيقات التواصل الاجتماعي، مؤسسيها، 
-وكيف أثرت على طريقة تفاعل الأفراد والمجتمعات في العصر الرقمي.
+تحليل إعلامي حديث حول نشأة أهم تطبيقات التواصل الاجتماعي،
+مؤسسيها، وأنماط الاستخدام وتأثيرها في تشكيل الرأي العام
+والهوية الرقمية في العصر الرقمي.
 </p>
 </section>
 
@@ -125,11 +172,11 @@ color:#777;
 <h2>إنستغرام</h2>
 <ul>
 <li>تأسس عام 2010</li>
-<li>المؤسسون: كيفن سيستروم ومايك كريغر</li>
-<li>استحوذت عليه شركة ميتا عام 2012</li>
-<li>يعتمد على مشاركة الصور والفيديوهات</li>
-<li>يستخدم للتسويق الرقمي وصناعة المحتوى وبناء الهوية الرقمية</li>
-<li>له تأثير كبير على ثقافة الصورة والترندات العالمية</li>
+<li>المؤسسون: Kevin Systrom و Mike Krieger</li>
+<li>استحوذت عليه Meta عام 2012</li>
+<li>يركز على الصور والفيديوهات القصيرة</li>
+<li>أداة أساسية للتسويق الرقمي وصناعة المحتوى</li>
+<li>يساهم في بناء الهوية البصرية والثقافة الرقمية</li>
 </ul>
 </div>
 </section>
@@ -139,11 +186,11 @@ color:#777;
 <h2>سناب شات</h2>
 <ul>
 <li>تأسس عام 2011</li>
-<li>المؤسسون: إيفان شبيغل، بوبي ميرفي، ريجي براون</li>
-<li>يعتمد على الرسائل والصور المؤقتة</li>
-<li>اشتهر بفلاتر الواقع المعزز</li>
-<li>يستخدم للتواصل اليومي السريع ومشاركة اللحظات اللحظية</li>
-<li>يتميز بالخصوصية والقصص المؤقتة</li>
+<li>المؤسسون: Evan Spiegel و Bobby Murphy</li>
+<li>يعتمد على الرسائل المؤقتة</li>
+<li>رائد في فلاتر الواقع المعزز (AR)</li>
+<li>يستخدم للتواصل السريع واليومي</li>
+<li>يعزز مفهوم الخصوصية اللحظية</li>
 </ul>
 </div>
 </section>
@@ -153,18 +200,79 @@ color:#777;
 <h2>تيك توك</h2>
 <ul>
 <li>أُطلق عالميًا عام 2016</li>
-<li>تملكه شركة ByteDance</li>
+<li>مملوك لشركة ByteDance</li>
 <li>يعتمد على الفيديوهات القصيرة</li>
-<li>يساهم في صناعة الترند والتأثير الجماهيري السريع</li>
-<li>أصبح أداة مؤثرة في الإعلام الرقمي والرأي العام</li>
-<li>يستخدم بكثرة في التسويق وصناعة المحتوى</li>
+<li>يصنع الترندات بسرعة قياسية</li>
+<li>له تأثير مباشر على الرأي العام</li>
+<li>منصة قوية للتسويق وصناعة النجوم الرقميين</li>
 </ul>
 </div>
 </section>
 
+<section id="stats">
+<div class="card">
+<h2>إحصائيات عالمية تقريبية</h2>
+<div class="stats">
+<div class="stat">
+<h3 class="counter" data-target="2000">0</h3>
+<p>مليون مستخدم إنستغرام</p>
+</div>
+<div class="stat">
+<h3 class="counter" data-target="750">0</h3>
+<p>مليون مستخدم سناب شات</p>
+</div>
+<div class="stat">
+<h3 class="counter" data-target="1500">0</h3>
+<p>مليون مستخدم تيك توك</p>
+</div>
+</div>
+</div>
+</section>
+
 <footer>
-إعداد الطالبة | مادة الإعلام الرقمي
+إعداد الطالبة | بحث في الإعلام الرقمي | 2026
 </footer>
+
+<button class="top" onclick="scrollToTop()">⬆</button>
+
+<script>
+const sections = document.querySelectorAll("section");
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+const top = sec.getBoundingClientRect().top;
+if(top < window.innerHeight - 100){
+sec.classList.add("show");
+}
+});
+
+if(window.scrollY > 300){
+document.querySelector(".top").style.display="block";
+}else{
+document.querySelector(".top").style.display="none";
+}
+});
+
+function scrollToTop(){
+window.scrollTo({top:0,behavior:'smooth'});
+}
+
+const counters=document.querySelectorAll(".counter");
+counters.forEach(counter=>{
+counter.innerText="0";
+const update=()=>{
+const target=+counter.getAttribute("data-target");
+const c=+counter.innerText;
+const inc=target/100;
+if(c<target){
+counter.innerText=`${Math.ceil(c+inc)}`;
+setTimeout(update,20);
+}else{
+counter.innerText=target+"+";
+}
+};
+update();
+});
+</script>
 
 </body>
 </html>
