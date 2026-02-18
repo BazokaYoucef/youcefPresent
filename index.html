@@ -7,11 +7,11 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;800&display=swap" rel="stylesheet">
 
-<!-- Particles.js -->
+<!-- Particles.js Library -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 <style>
-/* ---------- Reset & Body ---------- */
+/* ---------- Reset & Base ---------- */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif;scroll-behavior:smooth;}
 body{background:#0f0f1a;color:white;overflow-x:hidden;transition:background 0.5s,color 0.5s;}
 body.light-mode{background:#f5f5f5;color:#111;}
@@ -19,7 +19,7 @@ body.light-mode{background:#f5f5f5;color:#111;}
 /* ---------- Navbar ---------- */
 nav{position:fixed;width:100%;top:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(15px);padding:20px 0;text-align:center;z-index:1000;box-shadow:0 0 20px rgba(0,0,0,0.5);border-bottom:1px solid #00f5ff;transition:background 0.5s;}
 body.light-mode nav{background:rgba(255,255,255,0.9);border-bottom:1px solid #8a2be2;}
-nav a{color:#00f5ff;margin:0 18px;text-decoration:none;font-weight:700;font-size:1.1rem;padding:8px 15px;border-radius:10px;transition:0.3s;text-shadow:0 0 5px #00f5ff;}
+nav a{color:#00f5ff;margin:0 15px;text-decoration:none;font-weight:700;font-size:1.1rem;padding:8px 15px;border-radius:10px;transition:0.3s;text-shadow:0 0 5px #00f5ff;}
 body.light-mode nav a{color:#8a2be2;text-shadow:none;}
 nav a:hover{background:rgba(0,245,255,0.2);color:#fff;text-shadow:0 0 12px #00f5ff;transform:scale(1.1);}
 body.light-mode nav a:hover{background:rgba(138,43,226,0.2);color:#111;text-shadow:none;}
@@ -29,7 +29,7 @@ body.light-mode nav a:hover{background:rgba(138,43,226,0.2);color:#111;text-shad
 body.light-mode .toggle-btn{background:#8a2be2;color:white;}
 
 /* ---------- Sections ---------- */
-section{padding:140px 20px;min-height:100vh;opacity:0;transform:translateY(50px);transition:1s;scroll-margin-top:90px;}
+section{padding:140px 20px;min-height:100vh;opacity:0;transform:translateY(60px);transition:1s;scroll-margin-top:90px;}
 section.show{opacity:1;transform:translateY(0);}
 .hero{text-align:center;}
 .hero h1{font-size:3.5rem;background:linear-gradient(90deg,#00f5ff,#8a2be2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 0 15px #00f5ff;}
@@ -37,8 +37,8 @@ body.light-mode .hero h1{-webkit-text-fill-color:#111;text-shadow:none;}
 .hero p{margin-top:25px;max-width:750px;margin-left:auto;margin-right:auto;color:#ccc;line-height:1.9;font-size:1.1rem;}
 body.light-mode .hero p{color:#333;}
 
-/* ---------- لوحة الأسماء ---------- */
-.credits-card{background:rgba(255,255,255,0.08);padding:40px;margin:30px auto;max-width:700px;border-radius:25px;backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.15);text-align:center;transition:0.5s;position:relative;overflow:hidden;}
+/* ---------- Credits Panel ---------- */
+.credits-card{background:rgba(255,255,255,0.08);padding:40px;margin:30px auto;max-width:700px;border-radius:25px;backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.15);text-align:center;transition:0.5s;}
 body.light-mode .credits-card{background:rgba(255,255,255,0.85);border:1px solid rgba(138,43,226,0.3);}
 .credits-card h2{color:#00f5ff;margin-bottom:20px;text-shadow:0 0 8px #00f5ff;}
 body.light-mode .credits-card h2{color:#8a2be2;text-shadow:none;}
@@ -48,24 +48,30 @@ body.light-mode .credits-card ul{color:#333;}
 /* ---------- Cards ---------- */
 .card{background:rgba(255,255,255,0.08);padding:35px;margin:30px auto;max-width:980px;border-radius:25px;backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.15);transition:0.5s;position:relative;overflow:hidden;}
 body.light-mode .card{background:rgba(255,255,255,0.85);border:1px solid rgba(138,43,226,0.3);}
-.card::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg, rgba(0,245,255,0.1), rgba(138,43,226,0.1));opacity:0;transition:0.6s;border-radius:25px;}
-.card:hover::before{opacity:1;}
 .card:hover{transform:translateY(-10px);box-shadow:0 0 35px #00f5ff;}
 body.light-mode .card:hover{box-shadow:0 0 35px #8a2be2;}
 
+/* ---------- Logos ---------- */
+.platform-logo{width:60px;margin-bottom:12px;transition:0.3s;}
+.platform-logo:hover{transform:scale(1.2);}
+
 /* ---------- Headings & Boxes ---------- */
-h2{color:#00f5ff;margin-bottom:18px;text-shadow:0 0 8px #00f5ff;}
+h2{color:#00f5ff;margin-bottom:12px;text-shadow:0 0 8px #00f5ff;}
 body.light-mode h2{color:#8a2be2;text-shadow:none;}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:25px;margin-top:25px;}
-.box{background:rgba(0,0,0,0.45);padding:22px;border-radius:18px;transition:0.4s;border:1px solid rgba(255,255,255,0.1);}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:25px;margin-top:20px;}
+.box{background:rgba(0,0,0,0.45);padding:20px;border-radius:18px;transition:0.4s;border:1px solid rgba(255,255,255,0.1);}
 body.light-mode .box{background:rgba(255,255,255,0.85);border:1px solid rgba(138,43,226,0.3);}
 .box:hover{transform:translateY(-5px);box-shadow:0 0 20px #8a2be2;}
-.box h3{margin-bottom:12px;color:#8a2be2;text-shadow:0 0 6px #8a2be2;}
+.box h3{margin-bottom:10px;color:#8a2be2;text-shadow:0 0 6px #8a2be2;}
 body.light-mode .box h3{color:#8a2be2;text-shadow:none;}
 ul{line-height:2;color:#ddd;}
 body.light-mode ul{color:#333;}
-.opinion{margin-top:22px;font-style:italic;color:#aaa;}
+.opinion{margin-top:20px;font-style:italic;color:#aaa;}
 body.light-mode .opinion{color:#555;}
+
+/* ---------- Comparison Table ---------- */
+table tr{transition:0.3s ease;cursor:pointer;}
+table tr:hover{background:linear-gradient(90deg,#00f5ff,#8a2be2);color:white;box-shadow:0 0 20px #00f5ff,0 0 40px #8a2be2;}
 
 /* ---------- Footer ---------- */
 footer{text-align:center;padding:35px;background:#0a0a14;color:#ccc;font-size:0.95rem;letter-spacing:0.5px;}
@@ -77,7 +83,8 @@ body.light-mode footer{background:#eee;color:#111;}
 </head>
 
 <body>
-<!-- Particles Container -->
+
+<!-- Particles Background -->
 <div id="particles-js" style="position:fixed;width:100%;height:100%;z-index:-1;top:0;left:0;"></div>
 
 <!-- Dark/Light Toggle -->
@@ -94,120 +101,125 @@ body.light-mode footer{background:#eee;color:#111;}
 <a href="#comparison">مقارنة</a>
 </nav>
 
-<!-- الصفحة الرئيسية -->
+<!-- Hero / Home -->
 <section class="hero show" id="home">
 <h1 id="typed-title"></h1>
 <p>دراسة إعلامية حديثة حول نشأة أهم المنصات الرقمية، إيجابياتها وسلبياتها، وآراء المستخدمين حول تأثيرها في حياتهم والمجتمع الرقمي.</p>
 </section>
 
-<!-- لوحة الأسماء -->
+<!-- Credits (لوحة الأسماء) -->
 <section id="credits">
 <div class="credits-card">
 <h2>هذا المشروع من إعداد:</h2>
 <ul>
 <li>الاسم الأول: ___________</li>
 <li>الاسم الثاني: ___________</li>
-<li>الاسم الثالث: ___________</li>
+<li>الالاسم الثالث: ___________</li>
 </ul>
 </div>
 </section>
 
-<!-- Sections لكل منصة (مثل السابق) -->
+<!-- منصة: إنستغرام -->
 <section id="instagram">
 <div class="card">
+<img class="platform-logo" src="https://img.icons8.com/color/96/000000/instagram-new.png" alt="Instagram">
 <h2>إنستغرام</h2>
 <p>تأسس عام 2010 – يركز على الصور والفيديوهات القصيرة وصناعة المحتوى البصري.</p>
 <div class="grid">
-<div class="box"><h3>الإيجابيات</h3>
-<ul><li>تعزيز الإبداع البصري</li><li>بناء الهوية الرقمية</li><li>منصة للتسويق الرقمي</li><li>التواصل مع جمهور عالمي</li></ul></div>
-<div class="box"><h3>السلبيات</h3>
-<ul><li>ضغط اجتماعي على الصورة والمظهر</li><li>الإدمان على التصفح</li><li>التنمر الإلكتروني</li><li>تأثير على الصحة النفسية</li></ul></div>
+<div class="box"><h3>الإيجابيات</h3><ul><li>تعزيز الإبداع البصري</li><li>بناء الهوية الرقمية</li><li>منصة للتسويق الرقمي</li><li>التواصل مع جمهور عالمي</li></ul></div>
+<div class="box"><h3>السلبيات</h3><ul><li>ضغط اجتماعي على الصورة والمظهر</li><li>إدمان التصفح</li><li>التنمر الإلكتروني</li><li>تأثير على الصحة النفسية</li></ul></div>
 </div>
-<p class="opinion">💬 آراء المستخدمين: منصة ملهمة للإبداع، لكن البعض يشعر بالضغط النفسي بسبب ثقافة الكمال.</p>
+<p class="opinion">💬 بعض المستخدمين يرونها منصة ممتازة للإبداع، بينما يشعر آخرون بالضغط الاجتماعي.</p>
 </div>
 </section>
 
+<!-- منصة: سناب شات -->
 <section id="snapchat">
 <div class="card">
+<img class="platform-logo" src="https://img.icons8.com/color/96/000000/snapchat-circular.png" alt="Snapchat">
 <h2>سناب شات</h2>
 <p>تأسس عام 2011 – يعتمد على الرسائل والصور المؤقتة والقصص اللحظية.</p>
 <div class="grid">
-<div class="box"><h3>الإيجابيات</h3><ul><li>خصوصية عالية للرسائل</li><li>فلاتر وواقع معزز مبتكر</li><li>تواصل سريع وعفوي</li><li>مناسب للمحتوى اليومي</li></ul></div>
-<div class="box"><h3>السلبيات</h3><ul><li>صعوبة توثيق المحتوى</li><li>الاستخدام المفرط للشباب</li><li>احتمال سوء الاستخدام للخصوصية</li><li>قليل الانتشار للكبار</li></ul></div>
+<div class="box"><h3>الإيجابيات</h3><ul><li>خصوصية أعلى</li><li>فلاتر مبتكرة</li><li>تواصل سريع وعفوي</li><li>محتوى يومي ممتع</li></ul></div>
+<div class="box"><h3>السلبيات</h3><ul><li>توثيق المحتوى صعب</li><li>استخدام مفرط</li><li>قد يؤثر على التركيز</li><li>ليس واسع الانتشار بين كبار السن</li></ul></div>
 </div>
-<p class="opinion">💬 آراء المستخدمين: مساحة ممتعة وآمنة للشباب، لكنها محدودة الاستخدام للفئات الأكبر.</p>
+<p class="opinion">💬 كثيرون يستمتعون بالفلاتر والخصوصية، بينما البعض يرى الاستخدام محدود خارج الدائرة الاجتماعية.</p>
 </div>
 </section>
 
+<!-- منصة: تيك توك -->
 <section id="tiktok">
 <div class="card">
+<img class="platform-logo" src="https://img.icons8.com/color/96/000000/tiktok--v1.png" alt="TikTok">
 <h2>تيك توك</h2>
-<p>أُطلق عالميًا عام 2016 – منصة فيديوهات قصيرة تعتمد على الخوارزميات الذكية.</p>
+<p>أُطلق عالميًا عام 2016 – منصة فيديوهات قصيرة تعتمد على خوارزميات قوية.</p>
 <div class="grid">
-<div class="box"><h3>الإيجابيات</h3><ul><li>انتشار سريع للمحتوى</li><li>سهولة صناعة الفيديو</li><li>اكتشاف مواهب جديدة</li><li>تأثير على الرأي العام</li></ul></div>
-<div class="box"><h3>السلبيات</h3><ul><li>إدمان المحتوى السريع</li><li>نشر معلومات مضللة أحيانًا</li><li>تحديات خطيرة</li><li>تأثير على التركيز</li></ul></div>
+<div class="box"><h3>الإيجابيات</h3><ul><li>انتشار سريع للمحتوى</li><li>سهولة صناعة الفيديو</li><li>اكتشاف المواهب</li><li>تأثير على الترند</li></ul></div>
+<div class="box"><h3>السلبيات</h3><ul><li>إدمان المحتوى السريع</li><li>نشر معلومات مضللة</li><li>تحديات خطيرة أحيانًا</li><li>قد يؤثر على التركيز</li></ul></div>
 </div>
-<p class="opinion">💬 آراء المستخدمين: منصة ترفيهية مبتكرة، لكنها تؤثر على وعي الشباب وسرعة انتشار الترندات.</p>
+<p class="opinion">💬 يعتبرها كثيرون منصة ترفيه قوية، بينما يخشى البعض من تأثيرها على الانتباه.</p>
 </div>
 </section>
 
+<!-- منصة: فيسبوك -->
 <section id="facebook">
 <div class="card">
+<img class="platform-logo" src="https://img.icons8.com/color/96/000000/facebook-new.png" alt="Facebook">
 <h2>فيسبوك</h2>
-<p>تأسس عام 2004 – أكبر شبكة اجتماعية عالمية.</p>
+<p>تأسس عام 2004 – أكبر شبكة تواصل اجتماعي عالميًا.</p>
 <div class="grid">
-<div class="box"><h3>الإيجابيات</h3><ul><li>ربط العائلة والأصدقاء</li><li>مجموعات مجتمعية</li><li>منصة إعلانية قوية</li><li>مشاركة الأخبار والمحتوى</li></ul></div>
-<div class="box"><h3>السلبيات</h3><ul><li>انتشار الأخبار المزيفة</li><li>مشاكل الخصوصية</li><li>الإدمان على التصفح</li><li>استغلال البيانات</li></ul></div>
+<div class="box"><h3>الإيجابيات</h3><ul><li>ربط الأصدقاء والعائلة</li><li>مجموعات مجتمعية</li><li>إعلانات قوية</li><li>مشاركة الأخبار</li></ul></div>
+<div class="box"><h3>السلبيات</h3><ul><li>أخبار مزيفة</li><li>قضايا خصوصية</li><li>إدمان التصفح</li><li>استغلال البيانات</li></ul></div>
 </div>
-<p class="opinion">💬 آراء المستخدمين: منصة شاملة للتواصل، لكنها تواجه انتقادات بسبب الخصوصية والمعلومات المضللة.</p>
+<p class="opinion">💬 بعض المستخدمين يرونه مكانًا هامًا للتواصل، بينما ينتقده البعض لأنظمة الخصوصية والإعلانات.</p>
 </div>
 </section>
 
+<!-- منصة: تويتر -->
 <section id="twitter">
 <div class="card">
+<img class="platform-logo" src="https://img.icons8.com/color/96/000000/twitter.png" alt="Twitter">
 <h2>تويتر (X)</h2>
-<p>تأسس عام 2006 – منصة تدوين مصغر تركز على الأخبار السريعة والرأي العام.</p>
+<p>تأسس عام 2006 – منصة تدوين صغير تركز على الأخبار السريعة والتفاعل العام.</p>
 <div class="grid">
-<div class="box"><h3>الإيجابيات</h3><ul><li>سرعة نقل الأخبار</li><li>منصة للنقاش العام</li><li>تفاعل مباشر مع شخصيات مؤثرة</li><li>تأثير قوي في السياسة والقضايا الاجتماعية</li></ul></div>
-<div class="box"><h3>السلبيات</h3><ul><li>استقطاب حاد في الرأي العام</li><li>انتشار الجدل الرقمي</li><li>حملات التشهير</li><li>انتشار المعلومات المضللة بسرعة</li></ul></div>
+<div class="box"><h3>الإيجابيات</h3><ul><li>نقل أخبار سريع</li><li>منصة للنقاش</li><li>تفاعل مباشر</li><li>تأثير في السياسة</li></ul></div>
+<div class="box"><h3>السلبيات</h3><ul><li>استقطاب رقمي</li><li>نقاشات حادة</li><li>معلومات مضللة</li><li>تشويش في بعض الأحيان</li></ul></div>
 </div>
-<p class="opinion">💬 آراء المستخدمين: منصة حرية تعبير قوية، لكنها تحتوي على الكثير من الجدل والاستقطاب.</p>
+<p class="opinion">💬 يُعتبر منصة حرية تعبير، بينما يراها البعض مليئة بالجدل.</p>
 </div>
 </section>
 
-<!-- جدول مقارنة Neon -->
+<!-- Comparison Table -->
 <section id="comparison">
 <div class="card">
 <h2>📊 مقارنة بين المنصات</h2>
-<table style="width:100%;border-collapse:collapse;color:white;">
+<table style="width:100%;border-collapse:collapse;color:white;font-size:1rem;">
 <tr style="background:rgba(0,245,255,0.2);">
 <th>المنصة</th><th>الإيجابيات</th><th>السلبيات</th>
 </tr>
 <tr style="background:rgba(138,43,226,0.2);">
-<td>إنستغرام</td><td>إبداع بصري، تسويق، تواصل عالمي</td><td>ضغط اجتماعي، إدمان</td>
+<td>إنستغرام</td><td>إبداع بصري، تسويق</td><td>ضغط اجتماعي، إدمان</td>
 </tr>
 <tr style="background:rgba(0,245,255,0.2);">
-<td>سناب شات</td><td>خصوصية، فلاتر، تواصل سريع</td><td>توثيق صعب، محدود للكبار</td>
+<td>سناب شات</td><td>خصوصية، فلاتر</td><td>توثيق صعب</td>
 </tr>
 <tr style="background:rgba(138,43,226,0.2);">
-<td>تيك توك</td><td>انتشار سريع، اكتشاف مواهب</td><td>إدمان، تحديات خطيرة</td>
+<td>تيك توك</td><td>انتشار، اكتشاف مواهب</td><td>إدمان، تحديات</td>
 </tr>
 <tr style="background:rgba(0,245,255,0.2);">
-<td>فيسبوك</td><td>ربط العائلة، مجموعات، إعلانات</td><td>أخبار مزيفة، خصوصية</td>
+<td>فيسبوك</td><td>ربط عائلة وأصدقاء</td><td>أخبار مزيفة، خصوصية</td>
 </tr>
 <tr style="background:rgba(138,43,226,0.2);">
-<td>تويتر</td><td>أخبار سريعة، نقاش، تفاعل</td><td>استقطاب، جدل، تشهير</td>
+<td>تويتر</td><td>أخبار سريعة، نقاش</td><td>استقطاب، جدل</td>
 </tr>
 </table>
 </div>
 </section>
 
-<footer>
-إعداد الطالبة | بحث الإعلام الرقمي | 2026
-</footer>
+<footer>إعداد الطالبة | بحث الإعلام الرقمي | 2026</footer>
 
 <script>
-// ---------- Scroll Animation ----------
+// Scroll Animation
 const sections = document.querySelectorAll("section");
 window.addEventListener("scroll",()=>{
 sections.forEach(sec=>{
@@ -218,13 +230,13 @@ sec.classList.add("show");
 });
 });
 
-// ---------- Particles ----------
+// Particles Config
 particlesJS("particles-js", {
 "particles": {
-"number": {"value": 80,"density": {"enable": true,"value_area": 800}},
-"color": {"value": "#00f5ff"},
-"shape": {"type": "circle"},
-"opacity": {"value":0.5,"random":true},
+"number": {"value": 80,"density":{"enable":true,"value_area":800}},
+"color":{"value":"#00f5ff"},
+"shape":{"type":"circle"},
+"opacity":{"value":0.5,"random":true},
 "size":{"value":3,"random":true},
 "line_linked":{"enable":true,"distance":150,"color":"#00f5ff","opacity":0.4,"width":1},
 "move":{"enable":true,"speed":2,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false}
@@ -232,10 +244,10 @@ particlesJS("particles-js", {
 "interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"grab"},"onclick":{"enable":true,"mode":"push"}},"modes":{"grab":{"distance":140,"line_linked":{"opacity":1}},"push":{"particles_nb":4}}}
 });
 
-// ---------- Dark/Light Toggle ----------
+// Dark/Light Mode Toggle
 function toggleMode(){document.body.classList.toggle("light-mode");}
 
-// ---------- Typed Title ----------
+// Typed Title Animation
 const typedTitle = document.getElementById("typed-title");
 const text = "تحليل شامل لمنصات التواصل الاجتماعي";
 let i=0;
